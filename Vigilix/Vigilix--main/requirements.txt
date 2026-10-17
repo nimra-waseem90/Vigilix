@@ -1,0 +1,30 @@
+# Core detection stack
+ultralytics>=8.3,<9
+opencv-python>=4.9
+torch>=2.2
+torchvision>=0.17
+# weapon-yolo26x's model card pins NumPy 1.26.x: ultralytics 8.3 dropped
+# some ops' support for NumPy 2.x.
+numpy>=2.1
+pillow
+pandas
+PyYAML
+matplotlib
+
+# Needed by download_weapon_model.py / download_fire_model.py
+huggingface_hub>=0.24
+
+# Optional, only needed if you export the weapon model to TensorRT for
+# fastest GPU inference (see OPTIMIZATION.md) - NVIDIA GPU + CUDA only.
+# onnx>=1.16
+# onnxsim>=0.4
+# tensorrt>=10.0; platform_system == "Linux"
+
+# Alerts / audio
+simpleaudio
+# Backend
+Flask>=3.0,<4
+python-dotenv>=1.0
+
+# Misc used by detection/alert scripts
+requests
